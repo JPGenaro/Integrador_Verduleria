@@ -54,7 +54,7 @@ class Formapago(models.Model):
 class Producto(models.Model):
     nombre = models.CharField(max_length=50, blank=True, null=True)
     precio = models.FloatField(blank=True, null=True)
-    stock = models.IntegerField(blank=True, null=True)
+    stock = models.FloatField(blank=True, null=True)
     id_tipoproducto = models.ForeignKey('Tipoproducto', models.DO_NOTHING, db_column='id_TipoProducto', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:

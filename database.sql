@@ -45,7 +45,7 @@ create table Producto(
     id int PRIMARY KEY auto_increment,
     nombre varchar(50),
     precio float,
-    stock int,
+    stock float,
     id_TipoProducto int,
     constraint id_TipoProducto foreign key (id_TipoProducto) references TipoProducto(id)
 );
