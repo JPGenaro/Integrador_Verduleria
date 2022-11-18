@@ -1,8 +1,13 @@
 from tkinter.tix import Form
 from django.contrib import admin
 from .models import Cliente, Venta, Tipoproducto, Documento, Formapago, Producto, Detalleproductoventa
-# Register your models here.
 
+#Admin site personalization
+admin.site.site_header="Verdulería Fénix"
+admin.site.index_title="Verdulería Fénix"
+
+
+# Register your models here.
 @admin.register(Cliente)
 class ClienteAdmin(admin.ModelAdmin):
     list_display = (Cliente.__str__, "telefono","email")
