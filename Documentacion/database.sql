@@ -4,7 +4,7 @@ use Verduleria;
 create table Documento(
     id int PRIMARY KEY auto_increment,
     tipo varchar(30),
-    numero int
+    numero varchar(45)
 );
 
 create table Cliente(
