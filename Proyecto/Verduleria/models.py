@@ -48,7 +48,7 @@ class Documento(models.Model):
         db_table = 'Documento'
     
     def __str__(self) -> str:
-        return str(self.numero)
+        return f'N° {self.numero}'
 
 
 class Formapago(models.Model):
