@@ -41,7 +41,7 @@ class Detalleproductoventa(models.Model):
 
 class Documento(models.Model):
     tipo = models.CharField(max_length=30, blank=True, null=True)
-    numero = models.IntegerField(blank=True, null=True)
+    numero = models.CharField(max_length=45, blank=True, null=True)
 
     class Meta:
         managed = False
