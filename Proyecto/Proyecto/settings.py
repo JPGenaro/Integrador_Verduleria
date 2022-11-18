@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +40,19 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Verduleria',
 ]
+
+JAZZMIN_SETTINGS = {
+    #"site_logo": "../Proyecto/static/image.jpg",
+    #"login_logo_dark": "../Proyecto/static/image.jpg",
+    "user_avatar": "../Proyecto/static/user.png",
+    "welcome_sign": "Bienvenido a la Verdulería Fénix",
+    "hide_apps": ["auth"],
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "slate",
+    "dark_mode_theme": "minty",
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
