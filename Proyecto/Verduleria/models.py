@@ -20,6 +20,9 @@ class Cliente(models.Model):
     class Meta:
         managed = False
         db_table = 'Cliente'
+    
+    def __str__(self) -> str:
+        return f'{self.apellido}, {self.nombre}'
 
 
 class Detalleproductoventa(models.Model):
@@ -31,6 +34,9 @@ class Detalleproductoventa(models.Model):
     class Meta:
         managed = False
         db_table = 'DetalleProductoVenta'
+    
+    def __str__(self) -> str:
+        return f'ID Producto: {self.id_producto}, ID Venta:{self.id_venta}'
 
 
 class Documento(models.Model):
@@ -40,6 +46,9 @@ class Documento(models.Model):
     class Meta:
         managed = False
         db_table = 'Documento'
+    
+    def __str__(self) -> str:
+        return f'N° {self.numero}'
 
 
 class Formapago(models.Model):
@@ -49,6 +58,9 @@ class Formapago(models.Model):
     class Meta:
         managed = False
         db_table = 'FormaPago'
+    
+    def __str__(self) -> str:
+        return str(self.nombre)
 
 
 class Producto(models.Model):
@@ -60,6 +72,9 @@ class Producto(models.Model):
     class Meta:
         managed = False
         db_table = 'Producto'
+    
+    def __str__(self) -> str:
+        return f'{self.nombre} ({self.id_tipoproducto.nombre}), ${self.precio}'
 
 
 class Tipoproducto(models.Model):
@@ -69,6 +84,9 @@ class Tipoproducto(models.Model):
     class Meta:
         managed = False
         db_table = 'TipoProducto'
+    
+    def __str__(self) -> str:
+        return str(self.nombre)
 
 
 class Venta(models.Model):
@@ -80,6 +98,9 @@ class Venta(models.Model):
     class Meta:
         managed = False
         db_table = 'Venta'
+    
+    def __str__(self) -> str:
+        return f'Cliente: {self.id_cliente.__str__}, Fecha: {self.fecha}'
 
 
 class AuthGroup(models.Model):
