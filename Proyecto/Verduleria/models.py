@@ -74,7 +74,7 @@ class Producto(models.Model):
         db_table = 'Producto'
     
     def __str__(self) -> str:
-        return f'{self.nombre} ({self.id_tipoproducto.__str__}), ${self.precio}'
+        return f'{self.nombre} ({self.id_tipoproducto.nombre}), ${self.precio}'
 
 
 class Tipoproducto(models.Model):
