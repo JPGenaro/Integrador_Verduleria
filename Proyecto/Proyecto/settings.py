@@ -46,12 +46,38 @@ JAZZMIN_SETTINGS = {
     #"login_logo_dark": "../Proyecto/static/image.jpg",
     "user_avatar": "../Proyecto/static/user.png",
     "welcome_sign": "Bienvenido a la Verdulería Fénix",
-    "hide_apps": ["auth"],
+    "order_with_respect_to": ["auth", "auth.user", "Verduleria", "Verduleria.Documento", "Verduleria.Cliente", "Verduleria.Formapago", "Verduleria.Tipoproducto", "Verduleria.Producto", "Verduleria.Detalleproductoventa", "Verduleria.Venta"]
 }
 
 JAZZMIN_UI_TWEAKS = {
-    "theme": "slate",
-    "dark_mode_theme": "minty",
+    "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "brand_colour": "navbar-orange",
+    "accent": "accent-warning",
+    "navbar": "navbar-danger navbar-dark",
+    "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-warning",
+    "sidebar_nav_small_text": True,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": False,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": True,
+    "theme": "cyborg",
+    "button_classes": {
+        "primary": "btn-primary",
+        "secondary": "btn-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    }
 }
 
 MIDDLEWARE = [
