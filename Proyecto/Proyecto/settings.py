@@ -46,7 +46,8 @@ JAZZMIN_SETTINGS = {
     #"login_logo_dark": "../Proyecto/static/image.jpg",
     "user_avatar": "../Proyecto/static/user.png",
     "welcome_sign": "Bienvenido a la Verdulería Fénix",
-    "order_with_respect_to": ["auth", "auth.user", "Verduleria", "Verduleria.Documento", "Verduleria.Cliente", "Verduleria.Formapago", "Verduleria.Tipoproducto", "Verduleria.Producto", "Verduleria.Detalleproductoventa", "Verduleria.Venta"]
+    "order_with_respect_to": ["auth", "auth.user", "Verduleria", "Verduleria.Documento", "Verduleria.Cliente", "Verduleria.Formapago", "Verduleria.Tipoproducto", "Verduleria.Producto", "Verduleria.Detalleproductoventa", "Verduleria.Venta"],
+    "show_ui_builder": True
 }
 
 JAZZMIN_UI_TWEAKS = {
@@ -54,15 +55,15 @@ JAZZMIN_UI_TWEAKS = {
     "footer_small_text": False,
     "body_small_text": False,
     "brand_small_text": False,
-    "brand_colour": "navbar-orange",
-    "accent": "accent-warning",
-    "navbar": "navbar-danger navbar-dark",
+    "brand_colour": "navbar-cyan",
+    "accent": "accent-teal",
+    "navbar": "navbar-success navbar-dark",
     "no_navbar_border": False,
     "navbar_fixed": False,
     "layout_boxed": False,
     "footer_fixed": False,
     "sidebar_fixed": False,
-    "sidebar": "sidebar-dark-warning",
+    "sidebar": "sidebar-dark-teal",
     "sidebar_nav_small_text": True,
     "sidebar_disable_expand": False,
     "sidebar_nav_child_indent": False,
