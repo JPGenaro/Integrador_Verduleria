@@ -42,26 +42,36 @@ INSTALLED_APPS = [
 ]
 
 JAZZMIN_SETTINGS = {
-    #"site_logo": "../Proyecto/static/image.jpg",
-    #"login_logo_dark": "../Proyecto/static/image.jpg",
-    "user_avatar": "../Proyecto/static/user.png",
+    "copyright": "ITSVillada 6C [Genaro, Marquez, Rolleri]",
     "welcome_sign": "Bienvenido a la Verdulería Fénix",
     "order_with_respect_to": ["auth", "auth.user", "Verduleria", "Verduleria.Documento", "Verduleria.Cliente", "Verduleria.Formapago", "Verduleria.Tipoproducto", "Verduleria.Producto", "Verduleria.Detalleproductoventa", "Verduleria.Venta"],
-    "show_ui_builder": True
+    "show-sidebar": True,
+    "navigation_expanded": True,
+    "icons": {
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "Verduleria.Documento": "fas fa-address-book",
+        "Verduleria.Cliente": "fas fa-street-view",
+        "Verduleria.Formapago": "fas fa-receipt",
+        "Verduleria.Tipoproducto": "fas fa-sitemap",
+        "Verduleria.Producto": "fas fa-seedling",
+        "Verduleria.Detalleproductoventa": "fas fa-tag",
+        "Verduleria.Venta": "fas fa-cart-plus",
+    },
 }
 
 JAZZMIN_UI_TWEAKS = {
     "navbar_small_text": False,
-    "footer_small_text": False,
+    "footer_small_text": True,
     "body_small_text": False,
     "brand_small_text": False,
     "brand_colour": "navbar-cyan",
     "accent": "accent-teal",
     "navbar": "navbar-success navbar-dark",
-    "no_navbar_border": False,
-    "navbar_fixed": False,
+    "no_navbar_border": True,
+    "navbar_fixed": True,
     "layout_boxed": False,
-    "footer_fixed": False,
+    "footer_fixed": True,
     "sidebar_fixed": False,
     "sidebar": "sidebar-dark-teal",
     "sidebar_nav_small_text": True,
