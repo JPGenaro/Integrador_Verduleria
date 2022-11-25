@@ -19,9 +19,29 @@
         <h1>Verduleria Fenix</h1>
     </div></div>
     <div class="container">
-        <h1>Nombre: {{ producto.nombre }}</h1>
-        <h1>Precio: {{ producto.precio }}</h1>
-        <h1>Tipo: {{ producto.id_tipoproducto }}</h1>
+        <h2>Detalle de tu carrito hasta el momento</h2>
+        <table class="table">
+            <tr>
+            <td>Producto</td>
+            <td>Tipo</td>
+            <td>Cantidad</td>
+            <td>Precio</td>
+            </tr>
+            {% for x in carrito %}
+            <tr>
+            <td>{{ x.id_producto.nombre }}</td>
+            <td>{{ x.id_producto.id_tipoproducto }}</td>
+            <td>{{ x.cantidadproducto }}</td>
+            <td>${{ x.precioproducto }}</td>
+            </tr>   
+            {% endfor %}
+            <tr>
+                <td>Precio final:</td>
+                <td>-</td>
+                <td>-</td>
+                <td>${{ precio_total }}</td>
+            </tr>
+        </table>
     </div>
 
     
