@@ -36,7 +36,7 @@ class Detalleproductoventa(models.Model):
         db_table = 'DetalleProductoVenta'
     
     def __str__(self) -> str:
-        return f'ID Producto: {self.id_producto}, ID Venta:{self.id_venta}'
+        return f'ID Producto: {self.id_producto}, ID Venta: {self.id_venta}'
 
 
 class Documento(models.Model):
