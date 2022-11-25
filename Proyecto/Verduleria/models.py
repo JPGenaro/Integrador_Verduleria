@@ -100,7 +100,7 @@ class Venta(models.Model):
         db_table = 'Venta'
     
     def __str__(self) -> str:
-        return f'Cliente: {self.id_cliente.__str__}, Fecha: {self.fecha}'
+        return f'Cliente: {self.id_cliente.nombre}, {self.id_cliente.apellido}; Fecha: {self.fecha}'
 
 
 class AuthGroup(models.Model):
