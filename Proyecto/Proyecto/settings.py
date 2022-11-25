@@ -47,12 +47,6 @@ JAZZMIN_SETTINGS = {
     "order_with_respect_to": ["auth", "auth.user", "Verduleria", "Verduleria.Documento", "Verduleria.Cliente", "Verduleria.Formapago", "Verduleria.Tipoproducto", "Verduleria.Producto", "Verduleria.Detalleproductoventa", "Verduleria.Venta"],
     "show-sidebar": True,
     "navigation_expanded": True,
-    "topmenu_links": [
-        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
-        {"name": "Jazzmin", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
-        {"name": "Repository", "url": "https://github.com/JPGenaro/Integrador_Verduleria", "new_window": True},
-        {"app": "Verduleria"},
-        ],
     "icons": {
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
