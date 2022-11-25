@@ -74,7 +74,7 @@ class Producto(models.Model):
         db_table = 'Producto'
     
     def __str__(self) -> str:
-        return f'{self.nombre} ({self.id_tipoproducto.nombre}), ${self.precio}'
+        return f'{self.nombre} ({self.id_tipoproducto}), ${self.precio}'
 
 
 class Tipoproducto(models.Model):
@@ -100,7 +100,7 @@ class Venta(models.Model):
         db_table = 'Venta'
     
     def __str__(self) -> str:
-        return f'Cliente: {self.id_cliente.nombre}, {self.id_cliente.apellido}; Fecha: {self.fecha}'
+        return f'Cliente: {self.id_cliente}, Fecha: {self.fecha}'
 
 
 class AuthGroup(models.Model):
