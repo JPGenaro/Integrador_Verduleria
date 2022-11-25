@@ -44,9 +44,18 @@ INSTALLED_APPS = [
 JAZZMIN_SETTINGS = {
     "copyright": "ITSVillada 6C [Genaro, Marquez, Rolleri]",
     "welcome_sign": "Bienvenido a la Verdulería Fénix",
-    "order_with_respect_to": ["auth", "auth.user", "Verduleria", "Verduleria.Documento", "Verduleria.Cliente", "Verduleria.Formapago", "Verduleria.Tipoproducto", "Verduleria.Producto", "Verduleria.Detalleproductoventa", "Verduleria.Venta"],
+    "order_with_respect_to": ["Verduleria", "Verduleria.Documento", "Verduleria.Cliente", "Verduleria.Formapago", "Verduleria.Tipoproducto", "Verduleria.Producto", "Verduleria.Detalleproductoventa", "Verduleria.Venta", "auth", "auth.user"],
     "show-sidebar": True,
     "navigation_expanded": True,
+    "topmenu_links": [
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": "-", "url": ""},
+        {"name": "Jazzmin", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+        {"name": "-", "url": ""},
+        {"name": "Repository", "url": "https://github.com/JPGenaro/Integrador_Verduleria", "new_window": True},
+        {"name": "-", "url": ""},
+        {"app": "Verduleria"},
+    ],
     "icons": {
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
