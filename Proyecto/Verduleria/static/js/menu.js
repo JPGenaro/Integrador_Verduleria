@@ -1,8 +1,4 @@
-function alerta() {
-
-    alert("Hola")
-    
-}
+(".alert").alert('close')
 
 
 
