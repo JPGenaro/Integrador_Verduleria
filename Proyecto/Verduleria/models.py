@@ -48,7 +48,7 @@ class Documento(models.Model):
         db_table = 'Documento'
     
     def __str__(self) -> str:
-        return f'N° {self.numero}'
+        return f'{self.tipo} N°: {self.numero}'
 
 
 class Formapago(models.Model):
@@ -100,7 +100,7 @@ class Venta(models.Model):
         db_table = 'Venta'
     
     def __str__(self) -> str:
-        return f'Cliente: {self.id_cliente}, Fecha: {self.fecha}'
+        return f'{self.detalle}, Cliente: {self.id_cliente}, Fecha: {self.fecha}'
 
 
 class AuthGroup(models.Model):
