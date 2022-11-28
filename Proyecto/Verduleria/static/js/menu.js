@@ -1,4 +1,3 @@
-(".alert").alert('close')
 
 
 
