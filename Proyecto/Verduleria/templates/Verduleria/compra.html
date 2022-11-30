@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/css/compra.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verduleria Fenix</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container-fluid pt-0 p-3 bg-dark">
+    <div class="container pt-3 p-3 bg-warning text-danger text-center">
+        <h1>Verduleria Fenix</h1>
+    </div></div>
+    <div class="container">
+        <h2>Detalle de tu carrito hasta el momento</h2>
+        <table class="table">
+            <thead class="table-dark">
+            <tr><dl>
+            <td><dt>Producto</dt></td>
+            <td><dt>Tipo</dt></td>
+            <td><dt>Cantidad</dt></td>
+            <td><dt>Precio/kg</dt></td>
+            </tr></dl></thead>
+            {% for x in carrito %}
+            <tr>
+            <td>{{ x.id_producto.nombre }}</td>
+            <td>{{ x.id_producto.id_tipoproducto }}</td>
+            <td>{{ x.cantidadproducto }}kg</td>
+            <td>${{ x.precioproducto }}</td>
+            </tr>   
+            {% endfor %}
+            <tr>
+                <td><dt>Precio final:</dt></td>
+                <td>-</td>
+                <td>-</td>
+                <td><dt>${{ precio_total }}</dt></td>
+            </tr>
+        </table>        
+    </div>  
+    <div class="container btn-compra">
+        <button type="button" class="btn btn-danger">Seguir comprando</button>
+        <button type="button" class="btn btn-success">Finalizar compra</button>
+    </div>
+
+    <section class="footer-links">
+        <section class="social">
+            <p id="C6">Puedes Encontrarnos En: </p>
+            <div class="links">
+                <a href="https://www.instagram.com/?hl=es-la">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://support.google.com/mail/answer/8494?co=GENIE.Platform%3DDesktop&hl=es/">
+                    <i class="fa fa-fw fa-envelope"></i>
+                </a>
+            </div>
+        </section>
+    </section>
+
+    <footer class="footer">
+        <h5>www.VerduleriaFenix.com.ar © Copyright © 2022 - Todos los derechos reservados</h5>
+    </footer>
+    
+</body>
+
+</html>

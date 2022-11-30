@@ -17,41 +17,11 @@
 
 <body>
 
-    <header class="BDNav" id="tercero">
-        <div class="Barra">
-            <div class="B1">
-                <a><button type="button" class="btn btn-dark">Inicio</button></a>
-            </div>
-
-            <div class="B1">
-                <a><button type="button" class="btn btn-dark">Carrito</button></a>
-            </div>
-
-            <div class="B1">
-                <a><button type="button" class="btn btn-dark">Recetas</button></a>
-            </div>
-
-            <div class="B1">
-                <a><button type="button" class="btn btn-dark">Contacto</button></a>
-            </div>
-
-            <div class="B1">
-                <a><button type="button" class="btn btn-dark">Como Comprar</button></a>
-            </div>
-
-            <div class="B2">
-                <input type="search" placeholder="Buscar Producto">
-            </div>
-        </div>
-    </header>
+    
 
     <header class="logoo" id="segundo">
 
         <section class="logo">
-
-            <h1 class="Dtext"> Bienvenidos a Verduleria Fenix </h1>
-
-            <a class=Bped><button type="button" class="btn btn-dark">EMPEZAR A COMPRAR</button></a>
 
             <img src="../../static/src/Logo_Verdu.png" alt="">
 
@@ -59,138 +29,189 @@
 
     </header>
 
-    <main class="main">
-        <div class="container">
-            <h2 class="main-title">Productos</h2>
-            <section class="container-productos">
-                <div class="product">
-                    <img src="../../static/src/papa-img.png" alt="" class="product-img">
-                    <div class="product-descripcion"> 
-                        <h3 class="product-titulo">Papa</h3>
-                        <span class="product-precio">100.0$</span>
-                    </div>
-                    <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-                </div>
-                <div class="product">
-                    <img src="../../static/src/brocoli-img.jpg" alt="" class="product-img">
-                    <div class="product-descripcion"> 
-                        <h3 class="product-titulo">Brocoli</h3>
-                        <span class="product-precio">150.0$</span>
-                    </div>
-                    <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-                </div>
-                <div class="product">
-                    <img src="../../static/src/ajo-img.jpg" alt="" class="product-img">
-                    <div class="product-descripcion"> 
-                        <h3 class="product-titulo">Ajo</h3>
-                        <span class="product-precio">125.0$</span>
-                    </div>
-                    <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-                </div>
-                <div class="product">
-                    <img src="../../static/src/acelga-img.jpg" alt="" class="product-img">
-                    <div class="product-descripcion"> 
-                        <h3 class="product-titulo">Acelga</h3>
-                        <span class="product-precio">135.0$</span>
-                    </div>
-                    <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-                </div>
-                <div class="product">
-                    <img src="../../static/src/lechuga-img.jpg" alt="" class="product-img">
-                    <div class="product-descripcion"> 
-                        <h3 class="product-titulo">Lechuga Fresca</h3>
-                        <span class="product-precio">175.0$</span>
-                    </div>
-                    <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-                </div>
-                <div class="product">
-                        <img src="../../static/src/lechuga-m-img.jpg" alt="" class="product-img">
-                    <div class="product-descripcion"> 
-                            <h3 class="product-titulo">Lechuga Morada</h3>
-                        <span class="product-precio">200.0$</span>
-                    </div>
-                    <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-                </div>
-                
-                <div class="product">
-                    <img src="../../static/src/limon-img.jpg" alt="" class="product-img">
-                    <div class="product-descripcion"> 
-                        <h3 class="product-titulo">Limon</h3>
-                        <span class="product-precio">200.0$</span>
-                    </div>
-                    <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-                </div> 
-            <div class="product">
-                <img src="../../static/src/lima-img.jpg" alt="" class="product-img">
-                <div class="product-descripcion"> 
-                    <h3 class="product-titulo">Lima</h3>
-                    <span class="product-precio">200.0$</span>
-                </div>
-                <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button> 
+    <header class="BDNav" id="tercero">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-light me-4" href="../../templates/Verduleria/index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light me-4" href="../../templates/Verduleria/compra.html">Carrito</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light me-4" href="../../templates/Verduleria/como-comprar.html">Como Comprar</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="text" placeholder="Search">
+                  <button class="btn btn-primary" type="button">Search</button>
+                </form>
+              </div>
             </div>
-            <div class="product">
-                <img src="../../static/src/cebolla-img.jpg" alt="" class="product-img">
-                <div class="product-descripcion"> 
-                    <h3 class="product-titulo">Cebolla</h3>
-                    <span class="product-precio">200.0$</span>
+          </nav>
+    </header>
+
+    <main class="main">   
+        <div class="container-fluid">
+            <div class="container-carrito">
+                <div>
+                    <h3 class="Mcarrito"><i><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img">Mi carrito</i></h3>
+                        {%for i in range(7)%}
+                            <div>
+                                <p>{{i}}</p>
+                            </div>
+                        {%endfor%}
+                    <table class="Tcarrito" id="tabla-productos">
+                        <tbody>
+                            <tr>
+                                <td>
+
+                                </td>    
+                            </tr>   
+                        </tbody>
+                    </table>
+
+
+
                 </div>
-                <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-            </div>
-            <div class="product">
-                <img src="../../static/src/cebolla-m-img.jpg" alt="" class="product-img">
-                <div class="product-descripcion"> 
-                    <h3 class="product-titulo">Limon</h3>
-                    <span class="product-precio">200.0$</span>
+
+                <div>
+                    <h2 class="main-title">Productos</h2>
+                    <section class="container-productos">
+                        <div class="product">
+                            <img src="../../static/src/papa-img.png" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Papa</h3>
+                                <span class="product-precio">100.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/brocoli-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Brocoli</h3>
+                                <span class="product-precio">150.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/ajo-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Ajo</h3>
+                                <span class="product-precio">125.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/acelga-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Acelga</h3>
+                                <span class="product-precio">135.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/lechuga-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Lechuga Fresca</h3>
+                                <span class="product-precio">175.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/lechuga-m-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Lechuga Morada</h3>
+                                <span class="product-precio">200.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        
+                        <div class="product">
+                            <img src="../../static/src/limon-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Limon</h3>
+                                <span class="product-precio">200.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div> 
+                        <div class="product">
+                            <img src="../../static/src/lima-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Lima</h3>
+                                <span class="product-precio">200.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/cebolla-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Cebolla</h3>
+                                <span class="product-precio">200.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/cebolla-m-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Limon</h3>
+                                <span class="product-precio">200.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/espinaca-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Espinaca</h3>
+                                <span class="product-precio">200.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/cebolla-b-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Cebolla de Berdeo</h3>
+                                <span class="product-precio">200.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/berenjena-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Berenjena</h3>
+                                <span class="product-precio">200.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/apio-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Apio</h3>
+                                <span class="product-precio">200.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                        <div class="product">
+                            <img src="../../static/src/albahaca-img.jpg" alt="" class="product-img">
+                            <div class="product-descripcion"> 
+                                <h3 class="product-titulo">Albahaca</h3>
+                                <span class="product-precio">200.0$</span>
+                            </div>
+                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                        </div>
+                    </section>
                 </div>
-                <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-            </div>
-            <div class="product">
-                <img src="../../static/src/espinaca-img.jpg" alt="" class="product-img">
-                <div class="product-descripcion"> 
-                    <h3 class="product-titulo">Espinaca</h3>
-                    <span class="product-precio">200.0$</span>
-                </div>
-                <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-            </div>
-            <div class="product">
-                <img src="../../static/src/cebolla-b-img.jpg" alt="" class="product-img">
-                <div class="product-descripcion"> 
-                    <h3 class="product-titulo">Cebolla de Berdeo</h3>
-                    <span class="product-precio">200.0$</span>
-                </div>
-                <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-            </div>
-            <div class="product">
-                <img src="../../static/src/berenjena-img.jpg" alt="" class="product-img">
-                <div class="product-descripcion"> 
-                    <h3 class="product-titulo">Berenjena</h3>
-                    <span class="product-precio">200.0$</span>
-                </div>
-                <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-            </div>
-            <div class="product">
-                <img src="../../static/src/apio-img.jpg" alt="" class="product-img">
-                <div class="product-descripcion"> 
-                    <h3 class="product-titulo">Apio</h3>
-                    <span class="product-precio">200.0$</span>
-                </div>
-                <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-            </div>
-            <div class="product">
-                <img src="../../static/src/albahaca-img.jpg" alt="" class="product-img">
-                <div class="product-descripcion"> 
-                    <h3 class="product-titulo">Albahaca</h3>
-                    <span class="product-precio">200.0$</span>
-                </div>
-                <button class="bt-carrito"><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img"></button>
-            </div>
+            </div>    
         </div>
-        
     </main>
 
     <footer id="contacto">
         <div class="contenedor footer-content">
-            
         </div>
         <div class="line"></div>
     </footer>

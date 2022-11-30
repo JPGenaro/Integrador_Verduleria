@@ -17,41 +17,11 @@
 
 <body>
 
-    <header class="BDNav" id="tercero">
-        <div class="Barra">
-            <div class="B1">
-                <a><button type="button" class="btn btn-dark">Inicio</button></a>
-            </div>
-
-            <div class="B1">
-                <a><button type="button" class="btn btn-dark">Carrito</button></a>
-            </div>
-
-            <div class="B1">
-                <a><button type="button" class="btn btn-dark">Recetas</button></a>
-            </div>
-
-            <div class="B1">
-                <a><button type="button" class="btn btn-dark">Contacto</button></a>
-            </div>
-
-            <div class="B1">
-                <a><button type="button" class="btn btn-dark">Como Comprar</button></a>
-            </div>
-
-            <div class="B2">
-                <input type="search" placeholder="Buscar Producto">
-            </div>
-        </div>
-    </header>
+    
 
     <header class="logoo" id="segundo">
 
         <section class="logo">
-
-            <h1 class="Dtext"> Bienvenidos a Verduleria Fenix </h1>
-
-            <a class=Bped><button type="button" class="btn btn-dark">EMPEZAR A COMPRAR</button></a>
 
             <img src="../../static/src/Logo_Verdu.png" alt="">
 
@@ -59,10 +29,85 @@
 
     </header>
 
-    <main class="">
-        <div class="">
+    <header class="BDNav" id="tercero">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-light me-4" href="../../templates/Verduleria/index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light me-4" href="../../templates/Verduleria/compra.html">Carrito</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light me-4" href="../../templates/Verduleria/como-comprar.html">Como Comprar</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="text" placeholder="Search">
+                  <button class="btn btn-primary" type="button">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    
+
+    <main class="main-como">
+
+      <div class="container-fluid">
+
+        <div class="container-sel">
+
+          <div class="sel-producto col-sm-4 col-xs-12" style="height:190px; padding:20px 10px; background:#189752; color:#ffffff">
+            <div class="col-sm-3">
+              <span style="font-size:40px; line-height:40px;"></span>
+            </div>
+            <div class="container-sel1 col-sm-9 texto-monstserrat">
+              <b>SELECCIONAR PRODUCTO</b><br>
+              <small>Especifique la cantidad que es fija.<br>
+              <u>Ejemplo:</u> Limón 1 kilo, y Ud. elige 1, 2, 3 veces la cantidad fija (Kg.) del producto.</small>
+              <br><br><a href="productos.php" style="color:#fff; text-decoration:underline; font-weight:400">Ir a productos</a>
+            </div>
+          </div>
 
         </div>
+
+      
+        <div class="container-agre">
+
+          <div class="agre-producto col-sm-4 col-xs-12">
+            <div class="col-sm-3">
+              <span style="font-size:40px; line-height:40px;"><i class="fa fa-lemon-o"></i></span>
+            </div>
+            <div class="col-sm-9 texto-monstserrat">
+              <b>SELECCIONAR PRODUCTO</b><br>
+              <small>Especifique la cantidad que es fija.<br>
+              <u>Ejemplo:</u> Limón 1 kilo, y Ud. elige 1, 2, 3 veces la cantidad fija (Kg.) del producto.</small>
+              <br><br><a href="productos.php" style="color:#fff; text-decoration:underline; font-weight:400">Ir a productos</a>
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="ver-carrito col-sm-4 col-xs-12">
+          <div class="col-sm-3">
+            <span style="font-size:40px; line-height:40px;"><i class="fa fa-lemon-o"></i></span>
+          </div>
+          <div class="col-sm-9 texto-monstserrat">
+            <b>SELECCIONAR PRODUCTO</b><br>
+            <small>Especifique la cantidad que es fija.<br>
+            <u>Ejemplo:</u> Limón 1 kilo, y Ud. elige 1, 2, 3 veces la cantidad fija (Kg.) del producto.</small>
+            <br><br><a href="productos.php" style="color:#fff; text-decoration:underline; font-weight:400">Ir a productos</a>
+          </div>
+        </div>
+
+      </div>
 
     </main>    
 
