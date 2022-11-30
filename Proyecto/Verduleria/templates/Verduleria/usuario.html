@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/css/compra.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verduleria Fenix</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container-fluid pt-0 p-3 bg-dark">
+        <div class="container pt-3 p-3 bg-warning text-success text-center">
+            <h1>Verduleria Fenix</h1>
+        </div>
+    </div>
+
+    <div class="container pt-4">
+        <h2>Ingreso de usuario</h2>
+        <form action="/action_page.php">
+            <div class="mb-3 mt-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+
+            <div class="mb-3">
+                <label for="pwd" class="form-label">Documento:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+            </div>
+
+            <div class="container" style="padding-left: 92.5%"> 
+                <button type="submit" class="btn btn-success">Ingresar</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="container pt-4">
+        <h2>Registrarse</h2>
+        <form action="/action_page.php">
+            <div class="mb-3 mt-3">
+                <label for="Nombre" class="form-label">Nombre:</label>
+                <input type="Nombre" class="form-control" id="nombre" placeholder="Ingrese el nombre" name="nombre">
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="Apellido" class="form-label">Apellido:</label>
+                <input type="Apellido" class="form-control" id="apellido" placeholder="Ingrese el apellido" name="apellido">
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="Direccion" class="form-label">Direccion:</label>
+                <input type="Direccion" class="form-control" id="Direccion" placeholder="Ingresar Direccion" name="Direccion">
+            </div>
+
+            <div class="mb-3 mt-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Ingresar email" name="email">
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="Telefono" class="form-label">Telefono:</label>
+                <input type="Telefono" class="form-control" id="Telefono" placeholder="Ingresar Telefono" name="Telefono">
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="cuit" class="form-label">cuit:</label>
+                <input type="cuit" class="form-control" id="cuit" placeholder="Ingresar cuit" name="cuit">
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="Documento" class="form-label">Documento:</label>
+                <select class="form-select" type="tipo_documento" id="tipo_documento">
+                    <option>DNI</option>
+                    <option>CURP</option>
+                    <option>CC</option>
+                    <option>CI</option>
+                </select><br>
+                <input type="Documento" class="form-control" id="Documento" placeholder="Ingresar Documento" name="Documento">
+            </div>
+            
+            <div class="container" style="padding-left: 91%">
+            <button type="submit" class="btn btn-success">Registrarse</button>
+            </div>
+        </form>
+    </div>
+
+    <section class="footer-links">
+        <section class="social">
+            <p id="C6">Puedes Encontrarnos En: </p>
+            <div class="links">
+                <a href="https://www.instagram.com/?hl=es-la">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://support.google.com/mail/answer/8494?co=GENIE.Platform%3DDesktop&hl=es/">
+                    <i class="fa fa-fw fa-envelope"></i>
+                </a>
+            </div>
+        </section>
+    </section>
+
+    <footer class="footer">
+        <h5>www.VerduleriaFenix.com.ar © Copyright © 2022 - Todos los derechos reservados</h5>
+    </footer>
+    
+</body>
+</html>

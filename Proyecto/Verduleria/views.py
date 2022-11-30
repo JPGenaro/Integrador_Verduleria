@@ -13,3 +13,6 @@ def compra(request):
     for i in carrito:
         precio_total += i.cantidadproducto * i.precioproducto
     return render(request, '../templates/Verduleria/compra.html', {'carrito':carrito, 'precio_total':precio_total})
+
+def usuario(request):
+    return render(request, '../templates/Verduleria/usuario.html')

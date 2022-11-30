@@ -18,11 +18,17 @@
 
 <body>
     <div class="container-fluid pt-0 p-3 bg-dark">
-    <div class="container pt-3 p-3 bg-warning text-danger text-center">
-        <h1>Verduleria Fenix</h1>
-    </div></div>
+        <div class="container pt-3 p-3 bg-warning text-success text-center">
+            <h1>Verduleria Fenix</h1>
+        </div>
+    </div>
+
     <div class="container">
         <h2>Detalle de tu carrito hasta el momento</h2>
+        <div class="container alert alert-info alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Info!</strong> La compra minima es de $1500.00
+        </div>
         <table class="table">
             <thead class="table-dark">
             <tr><dl>
@@ -47,6 +53,7 @@
             </tr>
         </table>        
     </div>  
+
     <div class="container btn-compra">
         <button type="button" class="btn btn-danger">Seguir comprando</button>
         <button type="button" class="btn btn-success">Finalizar compra</button>
