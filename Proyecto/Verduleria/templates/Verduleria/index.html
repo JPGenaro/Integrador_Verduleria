@@ -55,23 +55,26 @@
             <div class="container-carrito">
                 <div>
                     <h3 class="Mcarrito"><i><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img">Mi carrito</i></h3>
-                        %for i in %
-                            <div>
-                                <p>{{i}}</p>
-                            </div>
-                        %endfor%
-                    <table class="Tcarrito" id="tabla-productos">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Cant/kg</th>
+                            <th>Producto</th>
+                            <th>Precio/U</th>
+                          </tr>
+                        </thead>
                         <tbody>
-                            <tr>
-                                <td>
-
-                                </td>    
-                            </tr>   
+                          <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                          </tr>
                         </tbody>
-                    </table>
+                      </table>
                 </div>
 
                 <div>
+                    {% with carro=[] %}
                     <h2 class="main-title">Productos</h2>
                     <section class="container-productos">
                         <div class="product">
@@ -80,7 +83,7 @@
                                 <h3 class="product-titulo">Papa</h3>
                                 <span class="product-precio">100.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/brocoli-img.jpg" alt="" class="product-img">
@@ -88,7 +91,7 @@
                                 <h3 class="product-titulo">Brocoli</h3>
                                 <span class="product-precio">150.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/ajo-img.jpg" alt="" class="product-img">
@@ -96,7 +99,7 @@
                                 <h3 class="product-titulo">Ajo</h3>
                                 <span class="product-precio">125.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/acelga-img.jpg" alt="" class="product-img">
@@ -104,7 +107,7 @@
                                 <h3 class="product-titulo">Acelga</h3>
                                 <span class="product-precio">135.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/lechuga-img.jpg" alt="" class="product-img">
@@ -112,7 +115,7 @@
                                 <h3 class="product-titulo">Lechuga Fresca</h3>
                                 <span class="product-precio">175.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/lechuga-m-img.jpg" alt="" class="product-img">
@@ -120,7 +123,7 @@
                                 <h3 class="product-titulo">Lechuga Morada</h3>
                                 <span class="product-precio">200.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         
                         <div class="product">
@@ -129,7 +132,7 @@
                                 <h3 class="product-titulo">Limon</h3>
                                 <span class="product-precio">200.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div> 
                         <div class="product">
                             <img src="../../static/src/lima-img.jpg" alt="" class="product-img">
@@ -137,7 +140,7 @@
                                 <h3 class="product-titulo">Lima</h3>
                                 <span class="product-precio">200.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/cebolla-img.jpg" alt="" class="product-img">
@@ -145,15 +148,15 @@
                                 <h3 class="product-titulo">Cebolla</h3>
                                 <span class="product-precio">200.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/cebolla-m-img.jpg" alt="" class="product-img">
                             <div class="product-descripcion"> 
-                                <h3 class="product-titulo">Limon</h3>
+                                <h3 class="product-titulo">Cebolla Morada</h3>
                                 <span class="product-precio">200.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/espinaca-img.jpg" alt="" class="product-img">
@@ -161,7 +164,7 @@
                                 <h3 class="product-titulo">Espinaca</h3>
                                 <span class="product-precio">200.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/cebolla-b-img.jpg" alt="" class="product-img">
@@ -169,7 +172,7 @@
                                 <h3 class="product-titulo">Cebolla de Berdeo</h3>
                                 <span class="product-precio">200.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/berenjena-img.jpg" alt="" class="product-img">
@@ -177,7 +180,7 @@
                                 <h3 class="product-titulo">Berenjena</h3>
                                 <span class="product-precio">200.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/apio-img.jpg" alt="" class="product-img">
@@ -185,7 +188,7 @@
                                 <h3 class="product-titulo">Apio</h3>
                                 <span class="product-precio">200.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                         <div class="product">
                             <img src="../../static/src/albahaca-img.jpg" alt="" class="product-img">
@@ -193,7 +196,7 @@
                                 <h3 class="product-titulo">Albahaca</h3>
                                 <span class="product-precio">200.0$</span>
                             </div>
-                            <button type="button" class="btn btn-danger">Comprar<img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            <button type="button" class="btn btn-danger"><strong>Comprar</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                         </div>
                     </section>
                 </div>

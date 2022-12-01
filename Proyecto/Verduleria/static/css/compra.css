@@ -23,6 +23,15 @@
     font-size: 3rem;
 }
 
+.title-1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.tt{
+    font-weight: bold;
+}
+
 /* FOOTER LINKS */
 .footer-links{
     background: #000000;
