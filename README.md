@@ -19,19 +19,19 @@ Nuestra app consiste de 4 páginas:
 3. Como Comprar
 4. Registro de Usuarios
 
-#### Inicio
+#### Inicio *[/home]*
 
 Aquí se muestran los productos que el *Usuario* puede comprar en nuestra verdulería, así mismo, se pueden añadir productos en caso de que la verdulería agregue alguno nuevo en algún momento.
 
-#### Compra
+#### Compra *[/home/compra]*
 
 Esta página muestra una tabla con todos los productos y cantidades de los mismos seleccionados hasta el momento, aquí se podrá finalizar la compra o continuar agregando productos en caso de desearlo.
 
-#### Como Comprar
+#### Como Comprar *[home/como-comprar]*
 
 En esta página hay un breve pero útil instructivo sobre como funciona tanto las páginas **Inicio** como **Compra** para cualquier persona que ingrese al sitio por primera vez.
 
-#### Registro de Usuarios
+#### Registro de Usuarios *[home/compra/usuario]*
 
 Si usted no está registrado dentro de la base de datos de la verdulería, podrá insertar sus datos a la misma para posteriormente realizar la compra de manera adecuada. En caso de ya estar registrado, solo deberá ingresar los datos solicitados para así efectuar la compra.
 
