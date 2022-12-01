@@ -31,16 +31,16 @@
               </button>
               <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
-                  <li class="nav-item">
-                    <a class="nav-link text-light me-4" href="home">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-light me-4" href="compra">Carrito</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-light me-4" href="como-comprar">Como Comprar</a>
-                  </li>
-                </ul>
+                    <li class="nav-item">
+                      <a class="nav-link text-light me-4" href="{% url 'home' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-light me-4" href="{% url 'compra' %}">Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-light me-4" href="{% url 'como_comprar'%}">Como Comprar</a>
+                    </li>
+                  </ul>
                 <form class="d-flex">
                   <input class="form-control me-2" type="text" placeholder="Search">
                   <button class="btn btn-primary" type="button">Search</button>
