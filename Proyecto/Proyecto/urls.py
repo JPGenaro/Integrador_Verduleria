@@ -23,5 +23,6 @@ urlpatterns = [
     path('home/como-comprar', como_comprar, name='como_comprar'),
     path('home/compra/', compra, name='compra'),
     path('home/compra/usuario', usuario, name='usuario'),
-    path('home/compra/addrecord/', addrecord, name='addrecord')
+    path('home/compra/addrecord/', addrecord, name='addrecord'),
+    path('home/compra/iniciar_sesion', iniciar_sesion, name='iniciar')
 ]

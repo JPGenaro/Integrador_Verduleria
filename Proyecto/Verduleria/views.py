@@ -48,10 +48,11 @@ def addrecord(request):
 # Funcion para iniciar usuario, bueno para verificar mejor dicho
 def iniciar_sesion(request):
     email = request.POST['email']
-    documento = request.POST['Documento']
-    clientes = Cliente.objects.values_list("email","id_documento").filter(email=email, id_documento=documento)
-    if len(clientes) == 1:
+    documento = request.POST['pswd']
+    clientes = Cliente.objects.values_list("email","id_documento").filter(email=email)
+    documentos = Documento.objects.values_list("id", "numero").filter(numero=documento)
+    if len(clientes) == 1 and len(documentos) == 1:
         return HttpResponseRedirect(reverse('compra'))
-    if len(clientes) == 0:
+    if len(clientes) == 0 and len(documentos) == 0:
         #Usuario no existente, por favor registrese
         return None
