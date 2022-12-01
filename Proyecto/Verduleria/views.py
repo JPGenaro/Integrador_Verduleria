@@ -40,7 +40,7 @@ def addrecord(request):
     email = request.POST['email']
     telefono = request.POST['Telefono']
     cuit = request.POST['cuit']
-    usuario = Cliente(nombre=nombre, apellido=apellido, direccion=direccion, email=email, telefono=telefono, cuit=cuit) 
+    usuario = Cliente(nombre=nombre, apellido=apellido, direccion=direccion, email=email, telefono=telefono, cuit=cuit, id_documento=Documento.objects.last()) 
     usuario.save()
 
     return HttpResponseRedirect(reverse('compra'))
