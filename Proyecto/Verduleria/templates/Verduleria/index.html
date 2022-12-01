@@ -55,23 +55,26 @@
             <div class="container-carrito">
                 <div>
                     <h3 class="Mcarrito"><i><img src="../../static/src/carrito-compra.png" alt="" class="carrito-img">Mi carrito</i></h3>
-                        %for i in %
-                            <div>
-                                <p>{{i}}</p>
-                            </div>
-                        %endfor%
-                    <table class="Tcarrito" id="tabla-productos">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Cant/kg</th>
+                            <th>Producto</th>
+                            <th>Precio/U</th>
+                          </tr>
+                        </thead>
                         <tbody>
-                            <tr>
-                                <td>
-
-                                </td>    
-                            </tr>   
+                          <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                          </tr>
                         </tbody>
-                    </table>
+                      </table>
                 </div>
 
                 <div>
+                    {% with carro=[] %}
                     <h2 class="main-title">Productos</h2>
                     <section class="container-productos">
                         <div class="product">
