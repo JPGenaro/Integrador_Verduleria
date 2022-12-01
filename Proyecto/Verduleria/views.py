@@ -45,3 +45,7 @@ def addrecord(request):
 
     return HttpResponseRedirect(reverse('compra'))
 
+# Funcion para iniciar usuario, bueno para verificar mejor dicho
+def iniciar_sesion(request):
+    email = request.POST['email']
+    documento = request.POST['Documento']
