@@ -3,7 +3,7 @@ from django.template import loader
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import *
-
+#how to display data on a template using pyhon and django
 # Create your views here.
 # Pagina principal
 def home(request):
