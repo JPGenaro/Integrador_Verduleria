@@ -53,6 +53,5 @@ def iniciar_sesion(request):
     documentos = Documento.objects.values_list("id", "numero").filter(numero=documento)
     if len(clientes) == 1 and len(documentos) == 1:
         return HttpResponseRedirect(reverse('compra'))
-    if len(clientes) == 0 and len(documentos) == 0:
-        #Usuario no existente, por favor registrese
-        return None
+    else:
+        return HttpResponseRedirect(reverse('compra'))
