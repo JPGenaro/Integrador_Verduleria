@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const hamburguer = document.querySelector('.hamburguer');
 const menu = document.querySelector('.menu-navegacion');
 
@@ -15,14 +14,3 @@ window.addEventListener('click', e=>{
             menu.classList.toggle("spread")
     }
 })
-=======
-
-
-
-
-
-
-
-
-
->>>>>>> templates
