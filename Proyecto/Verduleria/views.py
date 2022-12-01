@@ -49,3 +49,9 @@ def addrecord(request):
 def iniciar_sesion(request):
     email = request.POST['email']
     documento = request.POST['Documento']
+    clientes = Cliente.objects.values_list("email","id_documento").filter(email=email, id_documento=documento)
+    if len(clientes) == 1:
+        return HttpResponseRedirect(reverse('compra'))
+    if len(clientes) == 0:
+        #Usuario no existente, por favor registrese
+        return None
