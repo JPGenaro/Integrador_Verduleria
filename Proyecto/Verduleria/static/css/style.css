@@ -61,7 +61,9 @@
 }
 
 .medio{
-    height: 20px;
+    background: #fe9800;
+    height: 30px;
+    width: 100%;
 }
 
 .logoo .logo img{
