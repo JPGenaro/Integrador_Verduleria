@@ -90,8 +90,8 @@
     </div>  
 
     <div class="container btn-compra">
-        <button type="button" class="btn btn-danger">Seguir comprando</button>
-        <a href="usuario"><button type="button" class="btn btn-success">Finalizar compra</button></a>
+        <a href="{% url 'home' %}"><button type="button" class="btn btn-danger">Seguir comprando</button></a>
+        <a href="{% url 'usuario' %}"><button type="button" class="btn btn-success">Finalizar compra</button></a>
     </div>
 
     <section class="footer-links">

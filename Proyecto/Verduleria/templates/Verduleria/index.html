@@ -74,10 +74,12 @@
                           </tr>
                         </tbody>
                       </table>
+                      <a href="{% url 'compra' %}"><button type="button" class="btn btn-success">Continuar compra</button></a>
                 </div>
 
                 <div>
                     <h2 class="main-title">Productos</h2>
+<<<<<<< HEAD
                     
 
                     
@@ -94,6 +96,21 @@
 
 
 
+=======
+                    <section class="container-productos">
+                        <form action="addrecord/" method="post">
+                          {% csrf_token %}
+                          <div class="product">
+                              <img src="../../static/src/papa-img.png" alt="" class="product-img">
+                              <div class="product-descripcion"> 
+                                  <h4 class="product-titulo">Papa</h4>
+                                  <h5 class="product-precio">100.0$</h5>
+                              </div>
+                              <button type="button" class="btn btn-danger"><strong>Agregar al carrito</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                          </div>
+                        </form>
+                    </section>
+>>>>>>> a5fb010a012e4e5c5d7dc469d000a8a6d1e573c3
                 </div>
             </div>    
         </div>
