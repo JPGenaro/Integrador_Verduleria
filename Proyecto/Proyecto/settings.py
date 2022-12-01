@@ -50,7 +50,7 @@ JAZZMIN_SETTINGS = {
     "topmenu_links": [
         {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
         {"name": "-", "url": ""},
-        {"name": "Jazzmin", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+        {"name": "Jazzmin", "url": "https://github.com/farridav/django-jazzmin", "new_window": True},
         {"name": "-", "url": ""},
         {"name": "Repository", "url": "https://github.com/JPGenaro/Integrador_Verduleria", "new_window": True},
         {"name": "-", "url": ""},
