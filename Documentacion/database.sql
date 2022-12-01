@@ -1,19 +1,20 @@
+drop database if exists Verduleria;
 create database Verduleria;
 use Verduleria;
 
 create table Documento(
     id int PRIMARY KEY auto_increment,
     tipo varchar(30),
-    numero varchar(45)
+    numero varchar(45) not null
 );
 
 create table Cliente(
     id int PRIMARY KEY auto_increment,
-    nombre varchar(30),
-    apellido varchar(30),
+    nombre varchar(30) not null,
+    apellido varchar(30) not null,
     direccion varchar(100),
     email varchar(80),
-    telefono int,
+    telefono int not null,
     cuit int,
     id_Documento int,
     constraint id_Documento foreign key (id_Documento) references Documento(id)
@@ -21,14 +22,14 @@ create table Cliente(
 
 create table FormaPago(
     id int PRIMARY KEY auto_increment,
-    nombre varchar(40),
+    nombre varchar(40) not null,
     descripcion varchar(100)
 );
 
 create table Venta(
     id int PRIMARY KEY auto_increment,
-    detalle varchar(50),
-    fecha date,
+    detalle varchar(50) not null,
+    fecha date not null,
     id_FormaPago int,
     id_Cliente int,
     constraint id_FormaPago foreign key (id_FormaPago) references FormaPago(id),
@@ -37,23 +38,23 @@ create table Venta(
 
 create table TipoProducto(
     id int PRIMARY KEY auto_increment,
-    nombre varchar(50),
+    nombre varchar(50) not null,
     descripcion varchar(50)
 );
 
 create table Producto(
     id int PRIMARY KEY auto_increment,
-    nombre varchar(50),
-    precio float,
-    stock float,
+    nombre varchar(50) not null,
+    precio float not null,
+    stock float not null,
     id_TipoProducto int,
     constraint id_TipoProducto foreign key (id_TipoProducto) references TipoProducto(id)
 );
 
 create table DetalleProductoVenta(
     id int PRIMARY KEY auto_increment,
-    precioProducto float,
-    cantidadProducto int,
+    precioProducto float not null,
+    cantidadProducto int not null,
     id_Producto int,
     id_Venta int,
     constraint id_Producto foreign key (id_Producto) references Producto(id),
