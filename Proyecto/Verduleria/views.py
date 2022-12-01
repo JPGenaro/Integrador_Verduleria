@@ -8,6 +8,9 @@ from .models import *
 # Pagina principal
 def home(request):
     return render(request, '../templates/Verduleria/index.html')#{'producto':dato})
+    
+def como_comprar(request):
+    return render(request, '../templates/Verduleria/como-comprar.html')
 
 # Pagina de finalizacion de compra
 def compra(request):
