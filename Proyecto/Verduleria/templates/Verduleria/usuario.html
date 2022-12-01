@@ -24,7 +24,8 @@
 
     <div class="container pt-4">
         <h2>Ingreso de usuario</h2>
-        <form action="/action_page.php">
+        <form action="/action_page.php" method="post">
+            {% csrf_token %}
             <div class="mb-3 mt-3">
             <label for="email" class="form-label">Email:</label>
             <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -43,7 +44,8 @@
     
     <div class="container pt-4">
         <h2>Registrarse</h2>
-        <form action="/action_page.php">
+        <form action="addrecord/" method="post">
+            {% csrf_token %}
             <div class="mb-3 mt-3">
                 <label for="Nombre" class="form-label">Nombre:</label>
                 <input type="Nombre" class="form-control" id="nombre" placeholder="Ingrese el nombre" name="nombre">
@@ -76,7 +78,7 @@
 
             <div class="mb-3 mt-3">
                 <label for="Documento" class="form-label">Documento:</label>
-                <select class="form-select" type="tipo_documento" id="tipo_documento">
+                <select class="form-select" type="tipo_documento" id="tipo_documento" name="tipo_documento">
                     <option>DNI</option>
                     <option>CURP</option>
                     <option>CC</option>
@@ -86,7 +88,7 @@
             </div>
             
             <div class="container" style="padding-left: 91%">
-            <button type="submit" class="btn btn-success">Registrarse</button>
+            <button type="submit" class="btn btn-success" value="Submit">Registrarse</button>
             </div>
         </form>
     </div>
