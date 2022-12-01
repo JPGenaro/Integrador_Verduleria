@@ -5,10 +5,12 @@ from django.urls import reverse
 from .models import *
 #how to display data on a template using pyhon and django
 # Create your views here.
+
 # Pagina principal
 def home(request):
     return render(request, '../templates/Verduleria/index.html')#{'producto':dato})
     
+# Pagina de explicacion de compra
 def como_comprar(request):
     return render(request, '../templates/Verduleria/como-comprar.html')
 
@@ -20,10 +22,12 @@ def compra(request):
         precio_total += i.cantidadproducto * i.precioproducto
     return render(request, '../templates/Verduleria/compra.html', {'carrito':carrito, 'precio_total':precio_total})
 
+# Pagina de usuario
 def usuario(request):
     template = loader.get_template('../templates/Verduleria/usuario.html')
     return HttpResponse(template.render({}, request))
 
+# Funcion para registrar usuarios
 def addrecord(request):
     tipo_documento = request.POST['tipo_documento']
     documento = request.POST['Documento']
