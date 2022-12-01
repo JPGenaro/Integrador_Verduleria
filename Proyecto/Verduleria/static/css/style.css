@@ -43,14 +43,8 @@
 }
 
 .logo{
-    margin-top: auto 2%;
-    width: auto 100%;
-    height: auto 10%;
+    height: 250px;
     background: #fe9800;
-}
-
-.logo .Dlogo{
-    
 }
 
 .logo .content2{ 
@@ -66,9 +60,17 @@
     font-size: 15px;
 }
 
-.logoo .logo img{
-    margin-left: 28%;
+.medio{
+    height: 20px;
 }
+
+.logoo .logo img{
+    width: 35%;
+    height: 115%;
+    margin-left: 32%;
+    margin-bottom: 10%;
+}
+
 
 .BDNav{
     width: 100%;
@@ -209,7 +211,7 @@
 }
 
 
-footer{
+.footer{
     background: #000000;
     padding-bottom: 0.1px;
 }
