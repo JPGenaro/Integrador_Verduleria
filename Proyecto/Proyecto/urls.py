@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Verduleria.views import home, compra, usuario, addrecord, como_comprar, iniciar_sesion
+from Verduleria.views import home, compra, usuario, addrecord, como_comprar, iniciar_sesion, carrito
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +24,6 @@ urlpatterns = [
     path('home/compra/', compra, name='compra'),
     path('home/compra/usuario', usuario, name='usuario'),
     path('home/compra/addrecord/', addrecord, name='addrecord'),
-    path('home/compra/iniciar_sesion', iniciar_sesion, name='iniciar')
+    path('home/compra/iniciar_sesion', iniciar_sesion, name='iniciar'),
+    path('home/carrito/', carrito, name='carrito')
 ]

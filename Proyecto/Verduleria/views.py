@@ -8,7 +8,7 @@ from .models import *
 
 # Pagina principal
 def home(request):
-    return render(request, '../templates/Verduleria/index.html')#{'producto':dato})
+    return render(request, '../templates/Verduleria/index.html')
     
 # Pagina de explicacion de compra
 def como_comprar(request):
@@ -56,3 +56,7 @@ def iniciar_sesion(request):
     if len(clientes) == 0 and len(documentos) == 0:
         #Usuario no existente, por favor registrese
         return None
+
+def carrito(request):
+    producto = request.POST['producto']
+    productos = Producto.objects.all().filter(nombre=producto)

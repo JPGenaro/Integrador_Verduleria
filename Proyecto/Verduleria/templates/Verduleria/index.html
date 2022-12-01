@@ -80,15 +80,15 @@
                 <div>
                     <h2 class="main-title">Productos</h2>
                     <section class="container-productos">
-                        <form action="addrecord/" method="post">
+                        <form action="carrito/" method="post">
                           {% csrf_token %}
                           <div class="product">
                               <img src="../../static/src/papa-img.png" alt="" class="product-img">
                               <div class="product-descripcion"> 
-                                  <h4 class="product-titulo">Papa</h4>
-                                  <h5 class="product-precio">$100.0</h5>
+                                  <h4 class="product-titulo" name="producto">Papa</h4>
+                                  <h5 class="product-precio" name="precio">$100.0</h5>
                               </div>
-                              <button type="button" class="btn btn-danger"><strong>Agregar al carrito</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                              <button type="submit" class="btn btn-danger" value="Submit"><strong>Agregar al carrito</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                           </div>
                         </form>
                     </section>
