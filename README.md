@@ -53,8 +53,20 @@ Y posteriormente ejecutar las siguientes lineas de código:
 
 Esto lo que hará será que la base de datos ingresada anteriormente pueda ser accedida por el proyecto.
 
-Luego ejecutamos el siguiente comando (estando en la carpeta "Integrador_Verduleria/Proyecto") con la terminal de python:
+Ahora debemos instalar los *packages* de Python para que funcione el proyecto dentro de un PipEnv u otros. Se crea a partir del siguiente comando ubicados en la carpeta base del Proyecto (Integrador_Verduleria):
+
+*pipenv install*
+
+*pipenv shell*
+
+Aquí dentro podremos instalar los *packages* sin que se instalen en nuestro dispositivo, para evitar conflictos con otros proyectos. Ahora, los *packages* que debemos instalar para que funcione este proyecto estan en ["Integrador_Verduleria/Documentacion/requierements.txt"] y debemos ejecutar el siguiente comando con cada *package*:
+
+*pip install [**package**]*
+
+Una vez instalados todos los *packages*, ejecutamos el siguiente comando (estando en la carpeta "Integrador_Verduleria/Proyecto") con la terminal de python:
 
 *./manage.py runserver*
 
-Y así ejecutaremos el proyecto. Disfrutenlo
+Y así ejecutaremos el proyecto.
+
+**Copyright © 2022 ITSVillada 6C [Genaro, Marquez, Rolleri]**. *All rights reserved*
