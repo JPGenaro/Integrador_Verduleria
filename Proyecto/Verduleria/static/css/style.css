@@ -1,10 +1,10 @@
-body{
+.body{
     margin: 0;
     padding: 0;
     background: #e3e3e3;
 }
 
-:root{
+.root{
     scroll-behavior: smooth;
 }
 
@@ -46,7 +46,7 @@ body{
     margin-top: auto 2%;
     width: auto 100%;
     height: auto 10%;
-    background: #ff8800;
+    background: #fe9800;
 }
 
 .logo .Dlogo{
@@ -67,8 +67,7 @@ body{
 }
 
 .logoo .logo img{
-    margin-left: 35%;
-    
+    margin-left: 28%;
 }
 
 .BDNav{
