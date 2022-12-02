@@ -82,18 +82,23 @@
                     <section class="container-productos">
                         <form action="carrito/" method="post">
                           {% csrf_token %}
-                          <div class="product">
-                              <img src="../../static/src/papa-img.png" alt="" class="product-img">
-                              <div class="product-descripcion"> 
-                                  <h4 class="product-titulo" name="producto">Papa</h4>
-                                  <h5 class="product-precio" name="precio">$100.0</h5>
-                              </div>
-                              <button type="submit" class="btn btn-danger" value="Submit"><strong>Agregar al carrito</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                          <div class="container-pro">
+                            <div class="product">
+                                <img src="../../static/src/papa-img.png" alt="" class="product-img">
+                                <div class="product-descripcion"> 
+                                    <h4 class="product-titulo" name="producto">Papa</h4>
+                                    <h5 class="product-precio" name="precio">$100.0</h5>
+                                </div>
+                                <button type="submit" class="btn btn-danger" value="Submit"><strong>Agregar al carrito</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                            </div>
                           </div>
                         </form>
                     </section>
                 </div>
-            </div>    
+
+
+                
+              </div>    
         </div>
     </main>
 

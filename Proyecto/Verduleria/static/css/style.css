@@ -168,7 +168,7 @@
 
 .container-carrito{
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 400px 1fr;
     height: auto;
 }
 
@@ -179,9 +179,14 @@
 }
 
 .product{
+    margin: 20px;
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
+}
+
+.container-pro{
+    
 }
 
 .carrito-img{
