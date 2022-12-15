@@ -3,20 +3,35 @@ from django.template import loader
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import *
+import datetime
 #how to display data on a template using pyhon and django
 # Create your views here.
 
 # Pagina principal
 def home(request):
     lista_productos = Producto.objects.all()
-    return render(request, '../templates/Verduleria/index.html', {'lista_productos': lista_productos})
+    carrito = Detalleproductoventa.objects.all()
+    return render(request, '../templates/Verduleria/index.html', {'lista_productos': lista_productos, 'carrito': carrito})
 
 # Agregar productos al carrito
 def carrito(request):
-    nombre = request.POST['producto']
-    carrito = Producto.objects.filter(nombre=nombre)
-    lista_productos = Producto.objects.all()
-    return render(request, '../templates/Verduleria/index.html', {'lista_productos': lista_productos})
+    # Venta
+    ventas = Venta.objects.all()
+    cant = len(ventas)
+    detalle = f"Compra{cant}"
+    venta = Venta(detalle=detalle, fecha='2022-12-15')
+    venta.save()
+
+    # Detalle
+    nombre = request.POST.get('producto')
+    precio = request.POST.get('precio')
+    cantidad = request.POST('cantidad')
+    producto = Producto.objects.filter(nombre=nombre)
+    venta_last = Venta.objects.last()
+    detalle = Detalleproductoventa(precio=precio, cantidad=cantidad)
+    detalle.save()
+
+    return HttpResponseRedirect(reverse('home'))
 
 # Pagina de explicacion de compra
 def como_comprar(request):
