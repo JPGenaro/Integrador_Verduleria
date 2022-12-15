@@ -8,8 +8,9 @@ from .models import *
 
 # Pagina principal
 def home(request):
-    return render(request, '../templates/Verduleria/index.html')
-    
+    lista_productos = Producto.objects.all()
+    return render(request, '../templates/Verduleria/index.html', {'lista_productos': lista_productos})
+
 # Pagina de explicacion de compra
 def como_comprar(request):
     return render(request, '../templates/Verduleria/como-comprar.html')
