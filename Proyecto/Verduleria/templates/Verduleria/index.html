@@ -68,9 +68,9 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                           </tr>
                         </tbody>
                       </table>
@@ -80,17 +80,16 @@
                 <div>
                     <h2 class="main-title">Productos</h2>
 
-                    
                     <section class="container-productos">
                       {% for x in lista_productos %}
                         <form action="carrito/" method="post">
                           {% csrf_token %}
-                          <div class="container-pro">
+                          <div class="container-pro"> 
                             <div class="product">
                                 <!--<img src="../../static/src/papa-img.png" alt="" class="product-img">-->
                                 <div class="product-descripcion"> 
-                                    <h4 class="product-titulo" name="producto">{{ x.nombre }}</h4>
-                                    <h5 class="product-precio" name="precio">${{ x.precio }}</h5>
+                                    <h4 class="product-titulo" type="producto" name="producto" id="producto">{{ x.nombre }}</p>
+                                    <h5 class="product-precio" type="precio" name="precio" id="precio">${{ x.precio }}</p>
                                 </div>
                                 <button type="submit" class="btn btn-danger" value="Submit"><strong>Agregar al carrito</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                             </div>

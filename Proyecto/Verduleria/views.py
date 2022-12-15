@@ -11,6 +11,13 @@ def home(request):
     lista_productos = Producto.objects.all()
     return render(request, '../templates/Verduleria/index.html', {'lista_productos': lista_productos})
 
+# Agregar productos al carrito
+def carrito(request):
+    nombre = request.POST['producto']
+    carrito = Producto.objects.filter(nombre=nombre)
+    lista_productos = Producto.objects.all()
+    return render(request, '../templates/Verduleria/index.html', {'lista_productos': lista_productos})
+
 # Pagina de explicacion de compra
 def como_comprar(request):
     return render(request, '../templates/Verduleria/como-comprar.html')
@@ -57,7 +64,3 @@ def iniciar_sesion(request):
     if len(clientes) == 0 and len(documentos) == 0:
         #Usuario no existente, por favor registrese
         return None
-
-def carrito(request):
-    producto = request.POST['producto']
-    productos = Producto.objects.all().filter(nombre=producto)
