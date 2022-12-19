@@ -16,10 +16,15 @@ def home(request):
 # Agregar productos al carrito
 def carrito(request, nombre):
     # Venta
+    from datetime import datetime
+    now = datetime.now()
+    import datetime
+    fecha = datetime.date(year=now.year, month=now.month, day=now.day)
+    fecha_str = fecha.strftime("20%y-%m-%d")
     ventas = Venta.objects.all()
     cant = len(ventas)
     detalle = f"Compra{cant}"
-    venta = Venta(detalle=detalle, fecha='2022-12-15')
+    venta = Venta(detalle=detalle, fecha=fecha_str)
     venta.save()
 
     # Detalle
@@ -28,6 +33,12 @@ def carrito(request, nombre):
     detalle = Detalleproductoventa(id_producto=producto, cantidadproducto=cantidad, precioproducto=producto.precio)
     detalle.save()
 
+    return HttpResponseRedirect(reverse('home'))
+
+#Borrar un producto del carrito
+def delete(request, id):
+    producto = Detalleproductoventa.objects.get(id=id)
+    producto.delete()
     return HttpResponseRedirect(reverse('home'))
 
 # Pagina de explicacion de compra

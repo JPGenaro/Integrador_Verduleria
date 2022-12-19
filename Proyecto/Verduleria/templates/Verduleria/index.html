@@ -64,14 +64,16 @@
                             <th>Producto</th>
                             <th>Cant/kg</th>
                             <th>Precio/U</th>
+                            <th></th>
                           </tr>
                         </thead>
                         <tbody>
                           {% for x in carrito %}
-                          <tr>
+                          <tr>  
                             <td>{{ x.id_producto.nombre }}</td>
                             <td>{{ x.cantidadproducto }}</td>
                             <td>${{ x.precioproducto }}</td>
+                            <td><a href="delete/{{ x.id }}"><button type="button" class="btn btn-outline-danger">Borrar</button></a></td>
                           </tr>
                           {% endfor %}
                         </tbody>
@@ -93,7 +95,7 @@
                                     <h4 class="product-titulo" name="producto" id="producto">{{ x.nombre }}</h4>
                                     <h5 class="product-precio" name="precio" id="precio">${{ x.precio }}</h5>
                                     <input type="cantidad" id="cantidad" placeholder="Ingrese la cantidad" name="cantidad">
-                                </div>
+                                </div><br>
                                 <button type="submit" class="btn btn-danger" value="Submit"><strong>Agregar al carrito</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                             </div>
                           </div>
