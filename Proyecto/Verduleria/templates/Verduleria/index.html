@@ -63,7 +63,7 @@
                           <tr>
                             <th>Producto</th>
                             <th>Cant/kg</th>
-                            <th>Precio/U</th>
+                            <th>Precio/kg</th>
                             <th></th>
                           </tr>
                         </thead>
@@ -93,10 +93,11 @@
                                 <!--<img src="../../static/src/papa-img.png" alt="" class="product-img">-->
                                 <div class="product-descripcion"> 
                                     <h4 class="product-titulo" name="producto" id="producto">{{ x.nombre }}</h4>
+                                    <h5 class="product-titulo" name="stock">stock: {{ x.stock }}kg</h5>
                                     <h5 class="product-precio" name="precio" id="precio">${{ x.precio }}</h5>
                                     <input type="cantidad" id="cantidad" placeholder="Ingrese la cantidad" name="cantidad">
                                 </div><br>
-                                <button type="submit" class="btn btn-danger" value="Submit"><strong>Agregar al carrito</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                                <button type="submit" class="btn btn-primary" value="Submit"><strong>Agregar al carrito</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                             </div>
                           </div>
                         </form>
