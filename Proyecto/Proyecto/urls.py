@@ -20,7 +20,7 @@ from Verduleria.views import home, compra, usuario, addrecord, como_comprar, ini
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home, name='home'),
-    path('home/carrito/', carrito, name='carrito'),
+    path('home/carrito/<str:nombre>', carrito, name='carrito'),
     path('home/como-comprar', como_comprar, name='como_comprar'),
     path('home/compra/', compra, name='compra'),
     path('home/compra/usuario/', usuario, name='usuario'),

@@ -14,7 +14,7 @@ def home(request):
     return render(request, '../templates/Verduleria/index.html', {'lista_productos': lista_productos, 'carrito': carrito})
 
 # Agregar productos al carrito
-def carrito(request):
+def carrito(request, nombre):
     # Venta
     ventas = Venta.objects.all()
     cant = len(ventas)
@@ -23,12 +23,9 @@ def carrito(request):
     venta.save()
 
     # Detalle
-    nombre = request.POST.get('producto')
-    precio = request.POST.get('precio')
-    cantidad = request.POST('cantidad')
-    producto = Producto.objects.filter(nombre=nombre)
-    venta_last = Venta.objects.last()
-    detalle = Detalleproductoventa(precio=precio, cantidad=cantidad)
+    producto = Producto.objects.get(nombre=nombre)
+    cantidad = request.POST['cantidad']
+    detalle = Detalleproductoventa(id_producto=producto, cantidadproducto=cantidad, precioproducto=producto.precio)
     detalle.save()
 
     return HttpResponseRedirect(reverse('home'))
