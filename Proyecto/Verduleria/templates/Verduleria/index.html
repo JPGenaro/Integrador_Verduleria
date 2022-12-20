@@ -23,9 +23,6 @@
         </section>
     </header>
 
-    <header class="medio">
-    </header>
-
     <header class="BDNav" id="tercero">
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container">
@@ -35,7 +32,10 @@
               <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                   <li class="nav-item">
-                    <a class="nav-link text-light me-4" href="{% url 'home' %}">Inicio</a>
+                    <a class="nav-link text-light me-4" href="{% url 'inicio' %}">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light me-4" href="{% url 'home' %}">Tienda</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-light me-4" href="{% url 'compra' %}">Carrito</a>
