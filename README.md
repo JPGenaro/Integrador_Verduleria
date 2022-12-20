@@ -12,14 +12,19 @@ Nuestro proyecto se trataba sobre la resolución ante un problema, una verduler�
 
 ### Páginas
 
-Nuestra app consiste de 4 páginas:
+Nuestra app consiste de 5 páginas:
 
 1. Inicio
-2. Compra
-3. Como Comprar
-4. Registro de Usuarios
+2. Tienda
+3. Compra
+4. Como Comprar
+5. Registro de Usuarios
 
-#### Inicio *[/home]*
+#### Inicio *[]*
+
+Esta es la primera ventana que se muestra en el proyecto en donde el cliente puede comenzar la compra.
+
+#### Tienda *[/home]*
 
 Aquí se muestran los productos que el *Usuario* puede comprar en nuestra verdulería, así mismo, se pueden añadir productos en caso de que la verdulería agregue alguno nuevo en algún momento.
 
