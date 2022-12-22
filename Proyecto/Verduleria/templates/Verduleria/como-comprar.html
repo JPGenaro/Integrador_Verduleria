@@ -39,7 +39,10 @@
               <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                   <li class="nav-item">
-                    <a class="nav-link text-light me-4" href="{% url 'home' %}">Inicio</a>
+                    <a class="nav-link text-light me-4" href="{% url 'inicio' %}">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light me-4" href="{% url 'home' %}">Tienda</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-light me-4" href="{% url 'compra' %}">Carrito</a>
@@ -68,7 +71,7 @@
               <b>SELECCIONAR PRODUCTO</b><br>
               <small>Especifique la cantidad que es fija.<br>
               <u>Ejemplo:</u> Limón 1 kilo, y Ud. elige 1, 2, 3 veces la cantidad fija (Kg.) del producto.</small>
-              <br><br><a href="productos.php" style="color:#fff; text-decoration:underline; font-weight:400">Ir a productos</a>
+              <br><br><a href="{% url 'home' %}" style="color:#fff; text-decoration:underline; font-weight:400">Ir a productos</a>
             </div>
           </div>
         </div>

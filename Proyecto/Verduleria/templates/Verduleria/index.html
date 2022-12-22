@@ -23,9 +23,6 @@
         </section>
     </header>
 
-    <header class="medio">
-    </header>
-
     <header class="BDNav" id="tercero">
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container">
@@ -35,7 +32,10 @@
               <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                   <li class="nav-item">
-                    <a class="nav-link text-light me-4" href="{% url 'home' %}">Inicio</a>
+                    <a class="nav-link text-light me-4" href="{% url 'inicio' %}">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light me-4" href="{% url 'home' %}">Tienda</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-light me-4" href="{% url 'compra' %}">Carrito</a>
@@ -61,17 +61,21 @@
                     <table class="table table-hover">
                         <thead>
                           <tr>
-                            <th>Cant/kg</th>
                             <th>Producto</th>
-                            <th>Precio/U</th>
+                            <th>Cant/kg</th>
+                            <th>Precio/kg</th>
+                            <th></th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
+                          {% for x in carrito %}
+                          <tr>  
+                            <td>{{ x.id_producto.nombre }}</td>
+                            <td>{{ x.cantidadproducto }}</td>
+                            <td>${{ x.precioproducto }}</td>
+                            <td><a href="delete/{{ x.id }}"><button type="button" class="btn btn-outline-danger">Borrar</button></a></td>
                           </tr>
+                          {% endfor %}
                         </tbody>
                       </table>
                       <a href="{% url 'compra' %}"><button type="button" class="btn btn-outline-success">Continuar compra</button></a>
@@ -79,25 +83,27 @@
 
                 <div>
                     <h2 class="main-title">Productos</h2>
+
                     <section class="container-productos">
-                        <form action="carrito/" method="post">
+                      {% for x in lista_productos %}
+                        <form action="carrito/{{ x.nombre }}" method="post">
                           {% csrf_token %}
-                          <div class="container-pro">
-                            <div class="product">
-                                <img src="../../static/src/papa-img.png" alt="" class="product-img">
+                          <div class="container-pro"> 
+                            <div class="product"> 
+                                <!--<img src="../../static/src/papa-img.png" alt="" class="product-img">-->
                                 <div class="product-descripcion"> 
-                                    <h4 class="product-titulo" name="producto">Papa</h4>
-                                    <h5 class="product-precio" name="precio">$100.0</h5>
-                                </div>
-                                <button type="submit" class="btn btn-danger" value="Submit"><strong>Agregar al carrito</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
+                                    <h4 class="product-titulo" name="producto" id="producto">{{ x.nombre }}</h4>
+                                    <h5 class="product-titulo" name="stock">stock: {{ x.stock }}kg</h5>
+                                    <h5 class="product-precio" name="precio" id="precio">${{ x.precio }}</h5>
+                                    <input type="cantidad" id="cantidad" placeholder="Ingrese la cantidad" name="cantidad">
+                                </div><br>
+                                <button type="submit" class="btn btn-primary" value="Submit"><strong>Agregar al carrito</strong><img src="../../static/src/carrito-compra2.png" alt="" class="carrito-img"></button>
                             </div>
                           </div>
                         </form>
+                        {% endfor %}
                     </section>
                 </div>
-
-
-                
               </div>    
         </div>
     </main>
