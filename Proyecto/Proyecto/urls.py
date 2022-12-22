@@ -15,16 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Verduleria.views import home, compra, usuario, addrecord, como_comprar, iniciar_sesion, carrito, delete
+from Verduleria.views import iniciar, addVenta, home, compra, usuario, addrecord, como_comprar, iniciar_sesion, carrito, delete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Inicio
+    path('', iniciar, name='inicio'),
+    path('addVenta/', addVenta, name='addVenta'),
+    # Tienda
     path('home/', home, name='home'),
     path('home/delete/<int:id>', delete, name='delete'),
     path('home/carrito/<str:nombre>', carrito, name='carrito'),
+    # Tutorial
     path('home/como-comprar', como_comprar, name='como_comprar'),
+    # Lista de la compra
     path('home/compra/', compra, name='compra'),
+    # Usuario
     path('home/compra/usuario/', usuario, name='usuario'),
-    path('home/compra/addrecord/', addrecord, name='addrecord'),
-    path('home/compra/iniciar_sesion/', iniciar_sesion, name='iniciar'),
+    path('home/compra/usuario/addrecord/', addrecord, name='addrecord'),
+    path('home/compra/usuario/iniciar_sesion/', iniciar_sesion, name='iniciar_sesion'),
 ]
